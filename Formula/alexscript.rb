@@ -2,7 +2,7 @@ class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
   url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.19.tar.gz"
-  sha256 "53e9d0b229cfbd9cdd7f3e61b85ae8021d30462feb2313568d3228b62bbb8771"
+  sha256 "48272b5454384f086d0db02257125f37ec31157da8924be0af68a3022eb538ba"
   license "MIT"
   version "0.9.19"
 
