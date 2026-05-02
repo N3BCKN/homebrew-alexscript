@@ -9,8 +9,7 @@ class Alexscript < Formula
   depends_on "ruby"
 
   def install
-    libexec.install Dir["lib/*"]
-    libexec.install Dir["bin/*"]
+    libexec.install "lib", "bin"
 
     (bin/"alexscript").write <<~EOS
       #!/bin/bash
@@ -22,7 +21,7 @@ class Alexscript < Formula
   end
 
   test do
-    output = shell_output("echo 'pokazl \"test\"' | #{bin}/alexscript")
+    output = shell_output("echo 'pokazl \"test\"' | #{bin}/alexscript /dev/stdin")
     assert_match "test", output
   end
 end
