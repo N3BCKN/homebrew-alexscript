@@ -1,10 +1,10 @@
 class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
-  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.19.tar.gz"
+  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.20.tar.gz"
   sha256 "48272b5454384f086d0db02257125f37ec31157da8924be0af68a3022eb538ba"
   license "MIT"
-  version "0.9.19"
+  version "0.9.20"
 
   depends_on "ruby"
 
