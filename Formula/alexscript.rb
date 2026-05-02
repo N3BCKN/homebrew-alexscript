@@ -1,10 +1,10 @@
 class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
-  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.21.tar.gz"
-  sha256 "b44e375afb0d0b244a905718252e62d53e4b8d9aa08e302dc3be595210697af3"
+  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.22.tar.gz"
+  sha256 "33cf72d634563022f21b89227cad4c11cd8d870046fb226a3a08f370387214f8"
   license "MIT"
-  version "0.9.21"
+  version "0.9.22"
 
   depends_on "ruby"
 
@@ -16,6 +16,21 @@ class Alexscript < Formula
   resource "slop" do
     url "https://rubygems.org/downloads/slop-4.10.1.gem"
     sha256 "844322b5ffcf17ed4815fdb173b04a20dd82b4fd93e3744c88c8fafea696d9c7"
+  end
+
+  resource "csv" do
+    url "https://rubygems.org/downloads/csv-3.3.5.gem"
+    sha256 "6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f"
+  end
+
+  resource "readline" do
+    url "https://rubygems.org/downloads/readline-0.0.4.gem"
+    sha256 "6138eef17be2b98298b672c3ea63bf9cb5158d401324f26e1e84f235879c1d6a"
+  end
+
+  resource "net-http" do
+    url "https://rubygems.org/downloads/net-http-0.6.0.gem"
+    sha256 "9621b20c137898af9d890556848c93603716cab516dc2c89b01a38b894e259fb"
   end
 
   def install
