@@ -1,12 +1,17 @@
 class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
-  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.22.tar.gz"
-  sha256 "33cf72d634563022f21b89227cad4c11cd8d870046fb226a3a08f370387214f8"
+  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.23.tar.gz"
+  sha256 "6018e2f489cf7e3b5603cccc90f21419cf88551547d76f583b2e6a6f6e19ecd7"
   license "MIT"
-  version "0.9.22"
+  version "0.9.23"
 
   depends_on "ruby"
+
+  resource "reline" do
+    url "https://rubygems.org/downloads/reline-0.5.12.gem"
+    sha256 "41ab36d3fd2aaa169e99f8b82a93b9585f51130529360e24388fcccc20a055a2"
+  end
 
   resource "colorize" do
     url "https://rubygems.org/downloads/colorize-1.1.0.gem"
