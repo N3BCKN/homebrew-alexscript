@@ -1,10 +1,10 @@
 class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
-  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.23.tar.gz"
-  sha256 "6018e2f489cf7e3b5603cccc90f21419cf88551547d76f583b2e6a6f6e19ecd7"
+  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.24.tar.gz"
+  sha256 "65e2a24f4feb15c933bd732c6fcc470927a45efebd539893e0361ebd766e2d7f"
   license "MIT"
-  version "0.9.23"
+  version "0.9.24"
 
   depends_on "ruby"
 
@@ -46,6 +46,7 @@ class Alexscript < Formula
       r.verify_download_integrity(r.fetch)
       system gem_bin, "install", r.cached_download,
              "--no-document",
+             "--ignore-dependencies",
              "--install-dir", libexec/"gems"
     end
 
