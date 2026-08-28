@@ -1,10 +1,9 @@
 class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
-  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.9.26.tar.gz"
-  sha256 "6c17e61e84bed93f672763c3a67a2368fc85ef0885a0a602dc58d1661e0801b7"
+  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.10.27.tar.gz"
+  sha256 "fe60b86d20c18d87574547097181be5a0e3eac7e2c5a60bcf78431ba7b51da56"
   license "MIT"
-  version "0.9.26"
 
   depends_on "ruby"
 
@@ -39,8 +38,8 @@ class Alexscript < Formula
   end
 
   def install
-    gem_bin = Formula["ruby"].opt_bin/"gem"
-    ruby_bin = Formula["ruby"].opt_bin/"ruby"
+    gem_bin = formula_opt_bin("ruby")/"gem"
+    ruby_bin = formula_opt_bin("ruby")/"ruby"
 
     resources.each do |r|
       r.verify_download_integrity(r.fetch)
