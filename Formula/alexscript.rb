@@ -1,8 +1,8 @@
 class Alexscript < Formula
   desc "Programming language with Polish syntax"
   homepage "https://github.com/N3BCKN/alexscript"
-  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.10.27.tar.gz"
-  sha256 "fe60b86d20c18d87574547097181be5a0e3eac7e2c5a60bcf78431ba7b51da56"
+  url "https://github.com/N3BCKN/alexscript/archive/refs/tags/v0.10.28.tar.gz"
+  sha256 "1d2a9572678567a73e9995d9aeb65fad0165297fb8e821aba65c0b9492e24d15"
   license "MIT"
 
   depends_on "ruby"
@@ -25,11 +25,6 @@ class Alexscript < Formula
   resource "csv" do
     url "https://rubygems.org/downloads/csv-3.3.5.gem"
     sha256 "6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f"
-  end
-
-  resource "readline" do
-    url "https://rubygems.org/downloads/readline-0.0.4.gem"
-    sha256 "6138eef17be2b98298b672c3ea63bf9cb5158d401324f26e1e84f235879c1d6a"
   end
 
   resource "net-http" do
@@ -63,7 +58,8 @@ class Alexscript < Formula
   end
 
   test do
-    output = shell_output("echo 'pokazl \"test\"' | #{bin}/alexscript /dev/stdin")
-    assert_match "test", output
+    (testpath/"t.as").write('pokazl "test"')
+    assert_match "test", shell_output("#{bin}/alexscript #{testpath}/t.as")
   end
 end
+
