@@ -37,7 +37,6 @@ class Alexscript < Formula
     ruby_bin = formula_opt_bin("ruby")/"ruby"
 
     resources.each do |r|
-      r.verify_download_integrity(r.fetch)
       system gem_bin, "install", r.cached_download,
              "--no-document",
              "--ignore-dependencies",
